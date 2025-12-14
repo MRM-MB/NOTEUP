@@ -3,7 +3,7 @@
 # NoteUp 📒
 
 <p align="center">
-  <img src="assets/noteup.png" alt="NoteUp Logo" width="200">
+  <img src="assets/noteup.png" alt="NoteUp Logo" width="400">
 </p>
 
 Welcome to **NoteUp**! This application is designed to help you manage your accounts efficiently and securely. Below is a detailed description of the app and its features.
