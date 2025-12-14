@@ -2,6 +2,10 @@
 
 # NoteUp 📒
 
+<p align="center">
+  <img src="assets/noteup.png" alt="NoteUp Logo" width="200">
+</p>
+
 Welcome to **NoteUp**! This application is designed to help you manage your accounts efficiently and securely. Below is a detailed description of the app and its features.
 
 ## Table of Contents
@@ -18,6 +22,8 @@ Welcome to **NoteUp**! This application is designed to help you manage your acco
 
 ## Introduction 📝
 **NoteUp** is a secure account management application built with Flask. It allows users to register, log in, and manage their accounts. The app supports Google OAuth for easy and secure login and includes detailed comments to help understand the functionality.
+
+![NoteUp Dashboard](assets/noteup_dashboard.webp)
 
 ## Features ✨
 - **User Registration and Login**: Secure user registration and login with password encryption.
