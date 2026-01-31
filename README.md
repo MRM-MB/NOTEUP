@@ -55,7 +55,7 @@ NOTEUP_WEB/
 ├── requirements.txt
 ```
 
-# Adding Company Brands ➕
+## Adding Company Brands ➕
 To add more companies to NoteUp, you need to update the following files:
 1. **Company Info**: Modify all Python files in the [company_info/](company_info/) folder.
 2. **Scripts**: Update [scripts/company-config.js](scripts/company-config.js) in the [scripts/](scripts/) folder.
