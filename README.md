@@ -9,6 +9,7 @@
 - Password recovery via security questions
 - Google OAuth
 - Auto-logout after inactivity
+- 
 ![NoteUp Dashboard](assets/noteup_dashboard.webp)
 
 
