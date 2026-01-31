@@ -66,16 +66,17 @@ NOTEUP_WEB/
 Use the asset updater to add or update company assets:
 - `python scripts/add_company_assets.py`
 
+If a company shows default images, the custom logo/banner is missing from the config files (defaults are a fallback). Get correct logo/banner URLs from https://brandfetch.com/ and add them via the updater.
+
 The updater asks for URLs and inserts them into the correct config files automatically (no manual edits needed). Use the prompts to set logo, banner, circular logo, website, category, and background.
 
 ![Asset Updater](README_assets/add_assets.png)
 
-If a company shows default images, the custom logo/banner is missing from the config files (defaults are a fallback). Get correct logo/banner URLs from https://brandfetch.com/ and add them via the updater.
-
 Tip: If a website doesn’t provide a high‑definition banner (or it looks pixelated), manually search for a higher‑quality banner and use that URL instead.
-
-Note: The free API tier allows only 100 requests per month and returns logos only (no banners). If desired, you can integrate the API to reduce manual image fetching.
 
 ## Customization 🎨
 - **Profile Pictures**: To add more profile images, append URLs in `get_random_profile_picture` inside [app.py](app.py).
-- **Background Colors**: Background images are defined in [static/background-styles.css](static/background-styles.css). Add your new CSS classes there, then map a company to a background set in [scripts/company-config.js](scripts/company-config.js).
+- **Background Colors**: Background images are defined in [static/background-styles.css](static/background-styles.css). Add new CSS classes there, then map a company to a background set in [scripts/company-config.js](scripts/company-config.js). The updater can select from existing background sets, but it does not create new CSS classes.
+
+## API Option
+An API approach is possible, but the free tier allows only 100 requests/month and returns logos only (no banners). If desired, you can integrate the API to reduce manual image fetching within those limits.
