@@ -15,7 +15,7 @@
 
 ## ✅ Two ways to try MAT
 1) 🧪 Live Demo (Render)
-Try the hosted demo here: noteup-qej0.onrender.com
+Try the hosted demo here: https://noteup-qej0.onrender.com/
 
 Note: This demo uses ephemeral storage. Data resets on restarts, so links may stop working.
 
