@@ -61,7 +61,7 @@ To add more companies to NoteUp, you need to update the following files:
 2. **Scripts**: Update [scripts/company-config.js](scripts/company-config.js) in the [scripts/](scripts/) folder.
 3. **App Configuration**: If you want a company name to appear in all capital letters (like BBC, CNN, or UPS), modify the [app.py](app.py) file in the `@app.template_filter('capitalize_full')` section.
 
-If you are adding a new company using the default images (not custom icons or banners), you can fetch brand assets from https://brandfetch.com/ and use the logo/banner URLs in the relevant config files.
+If a correctly spelled company appears with default images (no custom logos or banners), it means the assets are not available in the current system. You can visit https://brandfetch.com/ to get the logo/banner URLs and add them to the relevant config files.
 
 Note: An API-based approach was considered, but the app was kept more customizable. The free API tier allows only 100 requests per month and returns logos only (no banners). If desired, an enhancement is to integrate the API from the same website to remove the dependency on manual image fetching.
 The existing links were fetched using a scraping method, but if you only need to add a few new links, you can add them manually.
