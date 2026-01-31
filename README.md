@@ -1,12 +1,9 @@
 ---
 
 # NoteUp 📒
-
-![NoteUp Logo](assets/noteup.png)
-
 **NoteUp** is a Flask-based account manager with registration, login, account storage, Google OAuth, and inactivity logout.
 
-![NoteUp Dashboard](assets/noteup_dashboard.webp)
+![NoteUp Logo](assets/noteup.png)
 
 ## Features
 - User registration and login
@@ -14,6 +11,8 @@
 - Password recovery via security questions
 - Google OAuth
 - Auto-logout after inactivity
+![NoteUp Dashboard](assets/noteup_dashboard.webp)
+
 
 ## ✅ Two ways to try MAT
 1) 🧪 Live Demo (Render)
@@ -58,12 +57,12 @@ NOTEUP_WEB/
 ```
 
 ## Adding Company Brands
-1. Update Python files in `company_info/`
-2. Update `scripts/company-config.js`
-3. For all-caps names, edit `@app.template_filter('capitalize_full')` in `app.py`
+Update Python files in company_info/
+Update scripts/company-config.js
+For all-caps names, edit @app.template_filter('capitalize_full') in app.py
 
 ## Customization
-- Update profile picture URLs in `get_random_profile_picture`
-- Modify UI in `templates/` and `static/`
+Update profile picture URLs in get_random_profile_picture
+Modify UI in templates/ and static/
 
 ---
