@@ -66,7 +66,7 @@ NOTEUP_WEB/
 Use the asset updater to add or update company assets:
 - `python scripts/add_company_assets.py`
 
-If a company shows default images, it means the company isn’t in the system with custom assets yet (logo/banner/link). Add the correct URLs from https://brandfetch.com/ using the updater to make the custom assets appear.
+If a company shows default images, it means the company isn’t in the system with custom assets yet (logo/banner/link). Use the updater to add a new company or update an existing one (image/link URLs) so the custom assets appear.
 
 The updater asks for URLs and inserts them into the correct config files automatically (no manual edits needed). Use the prompts to set logo, banner, circular logo, website, category, and background.
 
