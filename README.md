@@ -29,7 +29,7 @@ Run the app on your own network so files persist with MySQL and sharing works wi
 4. Run: `python app.py`
 5. Open: `http://127.0.0.1:5000`
 
-## Folder Structure
+## 📁 Folder Structure
 ```plaintext
 NOTEUP_WEB/
 │
@@ -74,7 +74,7 @@ You can customize NoteUp by:
 - **Changing Profile Pictures**: Update the URLs in the `get_random_profile_picture` method in the `NoteUp` class.
 - **UI Enhancements**: Modify HTML files in the [templates/](templates/) folder and CSS/JS files in the [static/](static/) folder.
 
-## Security Precautions 🔒
+## Security Precautions
 
 To ensure the security of user data, NoteUp implements several key precautions:
 
