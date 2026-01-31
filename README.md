@@ -76,7 +76,7 @@ Tip: If a website doesn’t provide a high‑definition banner (or it looks pixe
 
 ## Customization 🎨
 - **Profile Pictures**: To add more profile images, append URLs in `get_random_profile_picture` inside [app.py](app.py).
-- **Background Colors**: Background images are defined in [static/background-styles.css](static/background-styles.css). Add new CSS classes there; the updater can link a company to one of those background sets, but it does not create new CSS classes. Backgrounds were created with https://app.haikei.app/.
+- **Background Colors**: Background images are defined in [static/background-styles.css](static/background-styles.css). Add new CSS classes there, the updater can link a company to one of those background sets, but it does not create new CSS classes. Backgrounds were created with https://app.haikei.app/.
 
 ## API Option
 Brandfetch provides an API: https://brandfetch.com/. An API approach is possible, but the free tier allows only 100 requests/month and returns logos only (no banners). If desired, you can integrate the API to reduce manual image fetching within those limits.
