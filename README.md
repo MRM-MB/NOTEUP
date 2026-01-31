@@ -8,7 +8,7 @@
 - Add, update, and delete accounts
 - Password recovery via security questions
 - Google OAuth
-- Auto-logout after inactivity
+- Auto-logout after inactivity (1 minute)
  
 ![NoteUp Dashboard](assets/noteup_dashboard.webp)
 
@@ -25,9 +25,19 @@ Run the app on your own network so files persist with MySQL and sharing works wi
 ## Quick Start
 1. Clone the repo
 2. Install dependencies: `pip install -r requirements.txt`
-3. Set up `.env` with Google Client ID and Secret
+3. Create a `.env` file with a `SECRET_KEY` (required for sessions). Google OAuth keys are optional unless you plan to use Google login.
+
+```env
+SECRET_KEY=your-unique-secret
+GOOGLE_CLIENT_ID=your-google-client-id   # optional
+GOOGLE_CLIENT_SECRET=your-google-client-secret   # optional
+```
+
 4. Run: `python app.py`
 5. Open: `http://127.0.0.1:5000`
+
+To run the asset updater:
+- `python scripts/add_company_assets.py`
 
 ## 📁 Folder Structure
 ```plaintext
@@ -43,6 +53,7 @@ NOTEUP_WEB/
 ├── scripts/
 │   ├── background.js
 │   ├── company-config.js
+│   ├── add_company_assets.py
 │   ├── inactivity.js
 │   ├── view.js
 │
@@ -70,6 +81,8 @@ def capitalize_full(name):
 ```
 
 If you add a new company and it shows the default images, that means the custom logo/banner is missing from the config files (the defaults are only a backup). To fix it, get the correct logo/banner URLs from https://brandfetch.com/ and add them to the relevant config files.
+
+Tip: If banner images from brand sites are too small or pixelated, search for higher-resolution banners online and use those URLs instead.
 
 Note: An API-based approach was considered, but the app was kept more customizable. The free API tier allows only 100 requests per month and returns logos only (no banners). If desired, an enhancement is to integrate the API from the same website to remove the dependency on manual image fetching.
 The existing links were fetched using a scraping method, but if you only need to add a few new links, you can add them manually.

@@ -212,4 +212,7 @@ company_logos = {
     "zoom": "https://asset.brandfetch.io/id3aO4Szj3/id_OHhUCAK.svg",
     "zoominfo": "https://asset.brandfetch.io/idRcifJ0pN/idgV4kpiVA.svg",
     "zomato": "https://asset.brandfetch.io/idEql8nEWn/idNVDZqdhh.svg",
+    "hostinger": "https://cdn.brandfetch.io/idmfbk1l6z/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1766604660803",
+    "proton": "https://cdn.brandfetch.io/idG21jby45/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1715868385789",
+    "linktree": "https://cdn.brandfetch.io/id_tNIm05N/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667559949385",
 }

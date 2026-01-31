@@ -210,4 +210,7 @@ circular_logos = {
     "zoom": "https://asset.brandfetch.io/id3aO4Szj3/idfZvWPDjP.jpeg?updated=1667574547253",
     "zoominfo": "https://asset.brandfetch.io/idRcifJ0pN/idDU6t89uf.jpeg?updated=1691765449517",
     "zomato": "https://asset.brandfetch.io/idEql8nEWn/idNLMWCnFH.png?updated=1667655668769",
+    "hostinger": "https://cdn.brandfetch.io/idmfbk1l6z/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1766604660891",
+    "proton": "https://cdn.brandfetch.io/idG21jby45/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1715867804223",
+    "linktree": "https://cdn.brandfetch.io/id_tNIm05N/w/400/h/400/theme/dark/icon.png?c=1bxid64Mup7aczewSAYMX&t=1768370844086",
 }

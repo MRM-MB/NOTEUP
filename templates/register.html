@@ -36,6 +36,7 @@
                         <button type="submit" class="btn btn-primary btn-block">Register</button>
                         <p class="small text-muted text-center">Already have an account? <a href="{{ url_for('login') }}" class="text-primary">Log in</a></p>
                     </form>
+                    {% if google_oauth_enabled %}
                     <!-- Separator Line -->
                     <div class="separator-container">
                         <hr class="separator">
@@ -48,6 +49,7 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt="Google logo" class="google-logo"> Continue with Google
                         </a>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -133,6 +135,7 @@
         }, { once: true });
     });
 
+    {% if google_oauth_enabled %}
     document.addEventListener('DOMContentLoaded', function() {
         var googleLoginButton = document.getElementById('google-login-button');
 
@@ -144,6 +147,7 @@
             arrow: true
         });
     });
+    {% endif %}
 
     // Verify if the username is already taken or available.
     document.getElementById('username').addEventListener('input', function() {

@@ -210,4 +210,7 @@ company_link = {
     "zoom": "https://zoom.us/",
     "zoominfo": "https://zoominfo.com/",
     "zomato": "https://zomato.com/",
+    "hostinger": "https://www.hostinger.com/special/000webhost",
+    "proton": "https://proton.me/",
+    "linktree": "https://linktr.ee/",
 }

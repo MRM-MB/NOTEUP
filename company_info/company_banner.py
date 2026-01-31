@@ -210,4 +210,7 @@ company_banner = {
     "zoom": "https://i.etsystatic.com/30702781/r/il/f1ee97/5586517529/il_fullxfull.5586517529_olyi.jpg",
     "zoominfo": "https://cxscoop.com/wp-content/uploads/2023/02/ZoomInfo-to-Integrate-GPT-Into-Its-Platform.png",
     "zomato": "https://wallpapercave.com/wp/wp9980760.jpg",
+    "hostinger": "https://www.artiiseo.com/wp-content/uploads/2019/11/Hostinger-Cover-compressor.jpg",
+    "proton": "https://res.cloudinary.com/dbulfrlrz/images/f_auto,q_auto/v1707566895/wp-pme/hero-design-blog-new/hero-design-blog-new.?_i=AA",
+    "linktree": "https://images.squarespace-cdn.com/content/v1/5faabdea9b12b247705ed864/ccf0bd17-ad3a-4f8e-a0e3-019c9a9ddd6d/LinkTreeHomePage.png",
 }

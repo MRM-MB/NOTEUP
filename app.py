@@ -5,6 +5,7 @@ import re
 import json
 import random
 import hashlib
+import secrets
 from datetime import datetime
 
 # Third-party imports.
@@ -23,7 +24,9 @@ from company_info.company_categories import company_categories
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Disable caching for static files
-app.secret_key = os.getenv('SECRET_KEY') # Create your own secret key and store it in the .env file
+app.secret_key = os.getenv('SECRET_KEY') or secrets.token_hex(32)  # Create your own secret key and store it in the .env file
+if not os.getenv('SECRET_KEY'):
+    print("Warning: SECRET_KEY not set. Using a temporary key; sessions will reset on restart.")
 app.config['SESSION_TYPE'] = 'filesystem'
 bcrypt = Bcrypt(app)
 
@@ -42,6 +45,7 @@ google_client_secret = os.getenv('GOOGLE_CLIENT_SECRET')
 # Use the variables in your Flask app configuration or elsewhere
 app.config['GOOGLE_CLIENT_ID'] = google_client_id
 app.config['GOOGLE_CLIENT_SECRET'] = google_client_secret
+app.config['GOOGLE_OAUTH_ENABLED'] = bool(google_client_id and google_client_secret)
 
 # Configuration for Google OAuth
 GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
@@ -228,7 +232,7 @@ def register():
         flash_message(message)
         if message == "Registration successful!":
             return redirect(url_for('login'))
-    return render_template('register.html')
+    return render_template('register.html', google_oauth_enabled=app.config['GOOGLE_OAUTH_ENABLED'])
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -240,7 +244,7 @@ def login():
         if message == "Login successful!":
             session['username'] = username  # Ensure session is set here
             return redirect(url_for('dashboard'))
-    return render_template('login.html')
+    return render_template('login.html', google_oauth_enabled=app.config['GOOGLE_OAUTH_ENABLED'])
     
 @app.route('/logout')
 def logout():
@@ -266,6 +270,9 @@ def bye_user():
 
 @app.route("/login/google")
 def google_login():
+    if not app.config['GOOGLE_OAUTH_ENABLED']:
+        flash("Google OAuth is not configured. Set GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET in .env.", "warning")
+        return redirect(url_for('login'))
     google_provider_cfg = get_google_provider_cfg()
     authorization_endpoint = google_provider_cfg["authorization_endpoint"]
 
@@ -279,6 +286,9 @@ def google_login():
 
 @app.route("/login/google/callback")
 def google_callback():
+    if not app.config['GOOGLE_OAUTH_ENABLED']:
+        flash("Google OAuth is not configured. Set GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET in .env.", "warning")
+        return redirect(url_for('login'))
     code = request.args.get("code")
 
     # Handle case where user cancels the verification
@@ -419,6 +429,11 @@ def update_account(account_index):
 @app.template_filter('capitalize_full')
 def capitalize_full(name):
     # List of company names that should remain fully capitalized
+    "HOSTINGER",
+    "PROTON",
+    "HOSTINGER",
+    "NETFLIX",
+    "NETFLIX",
     exceptions = ["CNN", "BBC", "BBVA", "ATT", "CNBC", "DELL", "HSBC", "ICICI", "UPS", "KPMG", "TATA", "SDU", "KTH"]
     
     if name.upper() in exceptions:

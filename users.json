@@ -1,0 +1,42 @@
+{
+    "maraj": {
+        "password": "$2b$12$vHjv1OU8O20VUApEfUoqeuU9VW4WIAwDCgjX/BWv1Ee5oRJHYME.O",
+        "security_question1": "A secret answer",
+        "security_answer1": "$2b$12$XLF5E89V9PXbGTRi/inQAeqvz.pBD0nNiGwhG0KZfFWsBPPngbnw2",
+        "accounts": [
+            {
+                "name": "linktree",
+                "username": "maraj",
+                "email": "maraj24@gmail.com",
+                "password": "gAAAAABpfkNO8cjEZ1X4M4m_1T9fUOPZUjeO_WF1LnpT5uqXhYjfVc2tj6h6-tr11nxiK7NZj3LtZO1z12i6iXLa2tRliHrmrA0tCbpDxb6hUn_TDvjcasc=",
+                "year_of_creation": "2001",
+                "description": ""
+            },
+            {
+                "name": "hostinger",
+                "username": "maraj",
+                "email": "maraj24@gmail.com",
+                "password": "gAAAAABpfkKpkrIgVu78zAiziMeRo6s8T490rDpgzP9xO4Nwic8foNZ514hHZvdHYQPk1coBQrcl6qZg9DFRry1rb1mLk1GHlRZ3TuVE97-wGhqUYxPVgpc=",
+                "year_of_creation": "2001",
+                "description": ""
+            },
+            {
+                "name": "proton",
+                "username": "maraj",
+                "email": "manish@gmail.com",
+                "password": "gAAAAABpfkJ8cHU0skG8nV-tDY5u_tWy8wdpLoauBpoeXKo4u1C__H95NcBo6bIjl_9-u-zmvErtg21G3LYbu1iQAp6Nf629UCYwRZYUWSISOub1QGlWc8w=",
+                "year_of_creation": "2001",
+                "description": ""
+            },
+            {
+                "name": "netflix",
+                "username": "maraj",
+                "email": "maraj23@gmail.com",
+                "password": "gAAAAABpfkJeG1E1a2eo5I9MchiuLOY2GlLzBB51f0CcWACkZmmgq2Mm2e45yFuveJ_bWgoUakqTGhFwJYu5VB5gp8UC-0W_yA==",
+                "year_of_creation": "2021",
+                "description": ""
+            }
+        ],
+        "profile_picture_url": "https://c.wallhere.com/photos/6e/77/Hannah_Jones_digital_art_painting_colorful_landscape_lake_trees_women-1575653.jpg!d"
+    }
+}

@@ -199,4 +199,7 @@ company_categories = {
     "wordpress": "Technology",
     "x": "News & Media",
     "yahoo": "Technology",
+    "hostinger": "Technology",
+    "proton": "Technology",
+    "linktree": "News & Media",
 }

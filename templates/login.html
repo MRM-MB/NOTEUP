@@ -24,6 +24,7 @@
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
                         <p class="small text-muted text-center">New here? <a href="{{ url_for('register') }}" class="text-primary">Register</a></p>
                     </form>
+                    {% if google_oauth_enabled %}
                     <!-- Separator Line -->
                     <div class="separator-container">
                         <hr class="separator">
@@ -36,6 +37,7 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt="Google logo" class="google-logo"> Continue with Google
                         </a>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -57,6 +59,7 @@
         });
     });
 
+    {% if google_oauth_enabled %}
     document.addEventListener('DOMContentLoaded', function() {
         var googleLoginButton = document.getElementById('google-login-button');
 
@@ -68,6 +71,7 @@
             arrow: true
         });
     });
+    {% endif %}
 </script>
 
 {% endblock %}

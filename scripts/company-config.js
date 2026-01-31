@@ -187,7 +187,7 @@
         monday: backgroundCombinations.Purple,
         morningstar: backgroundCombinations.Red,
         "morgan stanley": backgroundCombinations.Blue,
-        netflix: backgroundCombinations.Red,
+        "netflix": backgroundCombinations.Red,
         netgear: backgroundCombinations.Blue,
         "the new york times": backgroundCombinations.Black,
         nike: backgroundCombinations.Blue,
@@ -286,5 +286,8 @@
         zoho: backgroundCombinations.Blue,
         zoom: backgroundCombinations.Blue,
         zoominfo: backgroundCombinations.Rausch,
-        zomato: backgroundCombinations.DarkRed
+        zomato: backgroundCombinations.DarkRed,
+        "hostinger": backgroundCombinations.Purple,
+        "proton": backgroundCombinations.Purple,
+        "linktree": backgroundCombinations.Green,
     };
