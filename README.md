@@ -1,5 +1,3 @@
----
-
 # NoteUp 📒
 **NoteUp** is a Flask-based account manager with registration, login, account storage, Google OAuth, and inactivity logout.
 
@@ -64,5 +62,3 @@ For all-caps names, edit @app.template_filter('capitalize_full') in app.py
 ## Customization
 Update profile picture URLs in get_random_profile_picture
 Modify UI in templates/ and static/
-
----
