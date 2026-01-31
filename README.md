@@ -15,7 +15,7 @@
 
 ## ✅ Two ways to try MAT
 1) 🧪 Live Demo (Render)
-Try the hosted demo here: https://noteup-qej0.onrender.com/
+Try the hosted demo here: [https://noteup-qej0.onrender.com/](https://noteup-qej0.onrender.com/)
 
 Note: This demo uses ephemeral storage. Data resets on restarts, so links may stop working.
 
@@ -55,11 +55,54 @@ NOTEUP_WEB/
 ├── requirements.txt
 ```
 
-## Adding Company Brands
-Update Python files in company_info/
-Update scripts/company-config.js
-For all-caps names, edit @app.template_filter('capitalize_full') in app.py
+# Adding Company Brands ➕
+To add more companies to NoteUp, you need to update the following files:
+1. **Company Info**: Modify all Python files in the [company_info/](company_info/) folder.
+2. **Scripts**: Update [scripts/company-config.js](scripts/company-config.js) in the [scripts/](scripts/) folder.
+3. **App Configuration**: If you want a company name to appear in all capital letters (like BBC, CNN, or UPS), modify the [app.py](app.py) file in the `@app.template_filter('capitalize_full')` section.
 
-## Customization
-Update profile picture URLs in get_random_profile_picture
-Modify UI in templates/ and static/
+```python
+@app.template_filter('capitalize_full')
+def capitalize_full(name):
+		# List of company names that should remain fully capitalized
+		exceptions = ["CNN", "BBC", "BBVA", "ATT", "CNBC", "DELL", "HSBC", "ICICI", "UPS", "KPMG", "TATA", "SDU", "KTH"]
+		...
+```
+
+## Customization 🎨
+You can customize NoteUp by:
+- **Changing Profile Pictures**: Update the URLs in the `get_random_profile_picture` method in the `NoteUp` class.
+- **UI Enhancements**: Modify HTML files in the [templates/](templates/) folder and CSS/JS files in the [static/](static/) folder.
+
+## Security Precautions 🔒
+
+To ensure the security of user data, NoteUp implements several key precautions:
+
+- **Password Encryption**: Instead of using SHA256 for password hashing, NoteUp uses `bcrypt`, a robust and secure method for hashing passwords. This enhances security by making it more difficult for attackers to crack passwords using brute force methods.
+
+	```python
+	def encrypt_password(self, password):
+			return bcrypt.generate_password_hash(password).decode('utf-8')
+  
+	def check_password(self, password, hashed):
+			return bcrypt.check_password_hash(hashed, password)
+	```
+
+- **Automatic Logout**: As an additional security measure, the app automatically logs out users after one minute of inactivity. This function helps prevent unauthorized access if a user leaves their session unattended. You can review the implementation of this feature in `inactivity.js` located in the [scripts/](scripts/) folder.
+
+	```javascript
+	// inactivity.js
+	let inactivityTime = function () {
+		let time;
+		// Automatically log out the user after 1 min of inactivity to enhance app security
+		let maxInactivityTime = 1 * 60 * 1000; // 1 minute in milliseconds
+
+		function logout() {
+				window.location.href = "/timepass";
+		}
+
+		function resetTimer() {
+				clearTimeout(time);
+				time = setTimeout(logout, maxInactivityTime);
+		}
+	```
