@@ -13,7 +13,7 @@
 ![NoteUp Dashboard](README_assets/noteup_dashboard.webp)
 
 
-## ✅ Live Demo
+## 🧪 Live Demo
 Try the hosted demo here: [https://noteup-qej0.onrender.com/](https://noteup-qej0.onrender.com/)
 
 Note: This demo uses ephemeral storage. Data resets on restarts, so created accounts may be lost.
